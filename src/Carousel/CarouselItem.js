@@ -1,10 +1,12 @@
 
 import React, {useState} from "react"; 
+import Images from "../components/Atom/Images";
 import Carousel from 'react-bootstrap/Carousel';
+import shark from '../Assets/Carousel/shark.jpg';
 
 const data = [
   {
-   image: require('./images/1.jpg'), 
+   image: shark, 
    caption:"HIU",
    description:"Ikan Hiu adalah sekelompok (superordo Selachimorpha) ikan dengan kerangka tulang rawan yang lengkap"
   },
@@ -31,16 +33,16 @@ function CarouselItem() {
        {data.map((slide, i) => {
         return (
           <Carousel.Item>        
-        <img
-          className="d-block w-100"
-          src={slide.image}
-          alt="slider image"
-        />
-        <Carousel.Caption>
-          <h3>{slide.caption}</h3>
-          <p>{slide.description}</p>
-        </Carousel.Caption>
-      </Carousel.Item>
+            <Images 
+              typeclass="d-block w-100" 
+              slideimage={slide.image} 
+              alternativetext="silder image" 
+            />
+            <Carousel.Caption>
+              <h3>{slide.caption}</h3>
+              <p>{slide.description}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
         )
       })}
       
