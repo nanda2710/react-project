@@ -1,15 +1,15 @@
 import React from "react";
 import {CardGroup, Card} from "react-bootstrap";
-import logo1 from './images/1.jpg';
-import logo2 from './images/2.jpg';
-import logo3 from './images/3.jpg';
-import logo4 from './images/4.jpg';
+import logo1 from '../../../Assets/Card/1.jpg';
+import logo2 from '../../../Assets/Card/2.jpg';
+import logo3 from '../../../Assets/Card/3.jpg';
+import './index.css'
 
 function CardItem(){
     return(
-<CardGroup>
 
-  <Card>
+<CardGroup>
+  <Card className="card">
     <Card.Img variant="top" src={logo1} />
     <Card.Body>
       <Card.Title>Ciri-ciri Kucing Demam dan Apa yang Sebaiknya Dilakukan Segera Oleh Pemilik</Card.Title>
@@ -51,22 +51,8 @@ function CardItem(){
       <small className="text-muted">Last updated 3 mins ago</small>
     </Card.Footer>
   </Card>
-
-  <Card>
-    <Card.Img variant="top" src={logo4} />
-    <Card.Body>
-      <Card.Title>Canis Lupus Familiaris: Sejarah Domestikasi Anjing, Sahabat Sejati Manusia</Card.Title>
-      <Card.Text>
-      Hubungan anjing dan manusia memiliki sejarah yang panjang. 
-      Domestikasi anjing berjalan secara bertahap seiring dengan berkembangnya peradaban dan kebudayaan manusia. 
-      Kali ini, mari kita bersama-sama menelusuri secara ringkas perjalanan panjang seekor anjing hingga menjadi sahabat sejati manusia.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
 </CardGroup>
+
     );
 }
 

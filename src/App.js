@@ -2,7 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CarouselItem from "./Carousel/CarouselItem";
 import Navbar from "./components/Molecule/NavBar";
-import CardItem from "./Card/CardItem";
+import CardItem from "./components/Molecule/Card";
 
 function App() {
   return (
