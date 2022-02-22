@@ -1,12 +1,12 @@
-import React, {useState} from "react"; 
-import './Carousel.css'
-import Images from "../components/Atom/Images";
+import React, {useState, useEffect} from "react"; 
+import './index.css'
+import Images from "../../Atom/Images/index.jsx";
 import Carousel from 'react-bootstrap/Carousel';
-import shark from '../Assets/Carousel/shark.jpg';
-import capung from '../Assets/Carousel/capung.jpg';
-import gajah from '../Assets/Carousel/gajah.jpg';
+import shark from '../../../Assets/Carousel/shark.jpg';
+import capung from '../../../Assets/Carousel/capung.jpg';
+import gajah from '../../../Assets/Carousel/gajah.jpg';
 
-const data = [
+const arr = [
   {
    image: shark, 
    caption:"HIU",
@@ -26,8 +26,16 @@ const data = [
 
 function CarouselItem() {
   const [index, setIndex] = useState(0);
+   
+  const [data, setData] = useState([{}]);
+
+  useEffect(() =>{
+      setData(arr);
+  },[])
+  console.log(data);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
+
   };
 
   return (
