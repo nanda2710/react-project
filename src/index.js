@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Routing from "./Route/index.jsx";
+import Navbar from "./components/Molecule/NavBar";
+import dataNavbar from "./Service/Navbar/index.js";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Navbar value={dataNavbar}/>
+    <Routing />
+     
   </React.StrictMode>,
   document.getElementById('root')
 );
