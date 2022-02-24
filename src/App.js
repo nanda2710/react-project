@@ -3,17 +3,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CarouselItem from "./components/Molecule/Carousel";
 import CardItem from "./components/Molecule/Card";
 import arr from "./Service/Carousel/index.js";
-// import Navbar from "./components/Molecule/NavBar";
-// import dataNavbar from "./Service/Navbar";
 import dataCard from "./Service/Card";
+import Api from "./Service/API";
 
 
 function App() {
   return (
     <div className="App">
 
-      {/* <Navbar value={dataNavbar}/> */}
-      
+      <Api/>
+
       <CarouselItem value={arr}/>
 
       <CardItem value={dataCard}/>
